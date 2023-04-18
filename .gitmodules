@@ -2,3 +2,7 @@
 	path = packages/march-core
 	url = git@github.com:MarchProject/march-core.git
 	branch = main
+[submodule "services/march-auth"]
+	path = services/march-auth
+	url = git@github.com:MarchProject/march-auth.git
+	branch = main
