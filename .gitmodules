@@ -1,0 +1,4 @@
+[submodule "packages/march-core"]
+	path = packages/march-core
+	url = git@github.com:MarchProject/march-core.git
+	branch = main
