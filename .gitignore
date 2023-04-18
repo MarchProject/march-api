@@ -1,0 +1,49 @@
+# Ignore public keys
+services/auth/.key
+services/token/.key
+
+# compiled output
+/dist
+/node_modules
+/packages/dap-apis/dist
+/packages/dap-apis/node_modules
+/services/da-registrar-api/dist
+/services/da-registrar-api/node_modules
+node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/settings.json
+
+.data
+dump.rdb
+
+# .env
+redis-cluster-nodes.conf
