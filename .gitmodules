@@ -6,3 +6,7 @@
 	path = services/march-auth
 	url = git@github.com:MarchProject/march-auth.git
 	branch = main
+[submodule "services/march-inventory"]
+	path = services/march-inventory
+	url = git@github.com:MarchProject/march-inventory.git
+	branch = main
