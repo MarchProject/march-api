@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  core-api:
+    container_name: core-api
+    image: march-core-test-0.0.1
+    build:
+      context: .
+      dockerfile: ./docker/core-dev.dockerfile
+  auth-api:
+    container_name: auth-api
+    image: march-auth-test-0.0.2
+    build:
+      context: .
+      dockerfile: ./docker/auth.dockerfile
+    ports:
+      - 3001:3001
+  inventory-api:
+    container_name: inventory-api
+    image: march-inventory-test-0.0.1
+    build:
+      context: .
+      dockerfile: ./docker/inventory.dockerfile
+    ports:
+      - 3002:3002
+  db1:
+    image: mariadb:10
+    command: --default-authentication-plugin=mysql_native_password
+    hostname: mariadb
+    volumes:
+      - ./mariaDb/mariadb:/var/lib/mysql
+      - ./mariaDb/schema:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+    environment:
+      - TZ=Asia/Bangkok
+      - MYSQL_ROOT_PASSWORD=123456
+      - "MYSQL_ROOT_HOST=%"
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
