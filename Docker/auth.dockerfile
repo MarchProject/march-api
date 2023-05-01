@@ -4,7 +4,7 @@ WORKDIR /app/
 
 RUN npm install -g pnpm
 
-COPY [".gitmodules", ".npmrc", "./"]
+COPY [".gitmodules", ".npmrc", "pnpm-workspace.yaml", "./"]
 
 WORKDIR /app/packages/march-core
 COPY packages/march-core .
@@ -14,9 +14,7 @@ RUN pnpm build
 WORKDIR /app/services/march-auth
 COPY services/march-auth .
 
-RUN pnpm install
-
-RUN pnpm prisma:gen
+RUN pnpm i . && pnpm prisma:gen
 
 RUN pnpm build
 

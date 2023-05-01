@@ -4,7 +4,7 @@ WORKDIR /app/
 
 RUN npm install -g pnpm
 
-COPY [".gitmodules", ".npmrc", "./"]
+COPY [".gitmodules", ".npmrc", "pnpm-workspace.yaml", "./"]
 
 WORKDIR /app/packages/march-core
 COPY packages/march-core .
