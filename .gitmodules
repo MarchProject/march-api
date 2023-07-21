@@ -2,6 +2,10 @@
 	path = packages/march-core
 	url = git@github.com:MarchProject/march-core.git
 	branch = main
+[submodule "packages/nestjs-proto-gen-ts"]
+	path = packages/nestjs-proto-gen-ts
+	url = git@github.com:MarchProject/nestjs-proto-gen-ts.git
+	branch = main
 [submodule "services/march-auth"]
 	path = services/march-auth
 	url = git@github.com:MarchProject/march-auth.git
