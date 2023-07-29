@@ -1,28 +1,63 @@
 version: "3"
 
 services:
-  core-api:
-    container_name: core-api
-    image: march-core-test-0.0.1
+  march-backoffice:
+    container_name: march-backoffice
+    # platform: linux/amd64\
+    volumes:
+      - ../march-web-backoffice/.env:/app/services/backoffice/.env
+    environment:
+      - NODE_ENV=production
+      - MARCH_BO_PORT=3000
+      - MARCH_BO_AUTH_API_URL=http://0.0.0.0/api/auth/graphql
+      - MARCH_BO_INVENTORY_API_URL=http://0.0.0.0/api/inventory/graphql
+      - MARCH_BO_DEFAULT_LOGIN_PATH=/login
+      - MARCH_BO_UAM_LOGIN_ENABLED=true
+      - BASE_PATH=/backoffice
+      - BACKOFFICE_TAG=0.1.0-1
+
+    image: mbo-admin:${BACKOFFICE_TAG}
+
     build:
       context: .
-      dockerfile: ./docker/core-dev.dockerfile
+      dockerfile: ../march-web-backoffice/docker/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    x-bake:
+      no-cache: true
   auth-api:
     container_name: auth-api
-    image: march-auth-test-0.0.2
+    image: march-auth-test-0.0.5
+    environment:
+      - DATABASE_URL=mysql://root:123456@db1:3306/march-auth?schema=public
+      - UAM_URL=http://auth-api:3001/auth/diviceId
+      - NODE_ENV=development
+      - GRAPHQL_INTROSPECTION=true
+      - GRAPHQL_DEBUG=true
+      - SECRET_KEY=skey_test_5ujjsgqvwpcrml3g702
     build:
       context: .
       dockerfile: ./docker/auth.dockerfile
     ports:
       - 3001:3001
+      - 5001:5001
   inventory-api:
     container_name: inventory-api
-    image: march-inventory-test-0.0.1
+    image: march-inventory-test-0.0.12
+    environment:
+      - DATABASE_URL=mysql://root:123456@db1:3306/march-inventory?schema=public
+      - UAM_URL=http://auth-api:3001/auth/diviceId
+      - NODE_ENV=development
+      - GRAPHQL_INTROSPECTION=true
+      - GRAPHQL_DEBUG=true
+      - SECRET_KEY=skey_test_5ujjsgqvwpcrml3g702
     build:
       context: .
       dockerfile: ./docker/inventory.dockerfile
     ports:
       - 3002:3002
+      - 5002:5002
   db1:
     image: mariadb:10
     command: --default-authentication-plugin=mysql_native_password
@@ -38,5 +73,7 @@ services:
       - "MYSQL_ROOT_HOST=%"
   nginx:
     build: ./nginx
+    image: nginx-test-0.0.4
+    restart: always
     ports:
       - "80:80"
