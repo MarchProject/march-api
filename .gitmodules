@@ -14,6 +14,10 @@
 	path = services/march-inventory
 	url = git@github.com:MarchProject/march-inventory.git
 	branch = main
+[submodule "services/march-user"]
+	path = services/march-user
+	url = git@github.com:MarchProject/march-user.git
+	branch = main
 [submodule "mariaDb"]
 	path = mariaDb
 	url = git@github.com:MarchProject/mariaDb.git
