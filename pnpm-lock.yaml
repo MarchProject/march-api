@@ -150,6 +150,9 @@ importers:
 
   services/march-auth:
     specifiers:
+      '@grpc/grpc-js': 1.4.5
+      '@grpc/nestjs-proto-gen-ts': workspace:1.0.20
+      '@grpc/proto-loader': 0.6.4
       '@march/core': workspace:1.0.0
       '@nestjs-modules/ioredis': ^1.0.1
       '@nestjs/axios': ^0.1.0
@@ -163,6 +166,7 @@ importers:
       '@nestjs/passport': ^9.0.0
       '@nestjs/platform-express': ^9.0.0
       '@nestjs/schematics': ^9.0.0
+      '@nestjs/swagger': 5.1.5
       '@nestjs/testing': ^9.0.0
       '@prisma/client': 3.12.0
       '@types/bcrypt': ^5.0.0
@@ -187,7 +191,9 @@ importers:
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
       express: ^4.18.2
+      google-protobuf: ^3.19.4
       graphql: 15.5.1
+      grpc: ^1.24.11
       ioredis: ^5.2.5
       jest: ^28.1.2
       jsonwebtoken: ^8.5.1
@@ -214,6 +220,9 @@ importers:
       uuid: ^8.3.2
       uuidv4: ^6.2.13
     dependencies:
+      '@grpc/grpc-js': 1.4.5
+      '@grpc/nestjs-proto-gen-ts': link:../../packages/nestjs-proto-gen-ts
+      '@grpc/proto-loader': 0.6.4
       '@march/core': link:../../packages/march-core
       '@nestjs-modules/ioredis': 1.0.1_lqzeeazzx4qogijrmxmrsuskky
       '@nestjs/axios': 0.1.1_4k3epc74gc2u2qkv5yznawsx6m
@@ -222,9 +231,10 @@ importers:
       '@nestjs/core': 9.4.0_o3jbrsoffotqhrs5cts35m3vnu
       '@nestjs/graphql': 7.4.6_tf3v67lysivctswsyr6x5k2t5u
       '@nestjs/jwt': 9.0.0_@nestjs+common@9.4.0
-      '@nestjs/microservices': 9.2.1_d5jkbjibiuhtczlsi725gqlmqu
+      '@nestjs/microservices': 9.2.1_4z6jzwtaz5boggihiwj5t7bf7a
       '@nestjs/passport': 9.0.3_xygznos57mh4mi6h22se6rwjhq
       '@nestjs/platform-express': 9.0.3_gqkob5jndcfeb3wjw72wbdwyne
+      '@nestjs/swagger': 5.1.5_oapxqihqbztbu6zsycplsfizdq
       '@prisma/client': 3.12.0_prisma@3.12.0
       '@types/bcrypt': 5.0.0
       '@types/jsonwebtoken': 9.0.2
@@ -238,7 +248,9 @@ importers:
       bcrypt: 5.1.0
       crypto-random-string: 3.3.1
       express: 4.18.2
+      google-protobuf: 3.21.2
       graphql: 15.5.1
+      grpc: 1.24.11
       ioredis: 5.3.2
       jsonwebtoken: 8.5.1
       lodash: 4.17.21
@@ -432,6 +444,9 @@ importers:
 
   services/march-user:
     specifiers:
+      '@grpc/grpc-js': 1.4.5
+      '@grpc/nestjs-proto-gen-ts': workspace:1.0.20
+      '@grpc/proto-loader': 0.6.4
       '@march/core': workspace:1.0.0
       '@nestjs-modules/ioredis': ^1.0.1
       '@nestjs/axios': ^0.1.0
@@ -445,6 +460,7 @@ importers:
       '@nestjs/passport': ^9.0.0
       '@nestjs/platform-express': ^9.0.0
       '@nestjs/schematics': ^9.0.0
+      '@nestjs/swagger': 5.1.5
       '@nestjs/testing': ^9.0.0
       '@prisma/client': 3.12.0
       '@types/bcrypt': ^5.0.0
@@ -468,7 +484,9 @@ importers:
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
       express: ^4.18.2
+      google-protobuf: ^3.19.4
       graphql: 15.5.1
+      grpc: ^1.24.11
       ioredis: ^5.2.5
       jest: ^28.1.2
       jsonwebtoken: ^8.5.1
@@ -480,6 +498,7 @@ importers:
       passport-local: ^1.0.0
       prettier: ^2.7.1
       prisma: 3.12.0
+      protobufjs: 6.11.2
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
       rxjs: ^7.5.5
@@ -489,11 +508,14 @@ importers:
       ts-loader: ^9.3.1
       ts-morph: 14.0.0
       ts-node: ^10.8.2
+      ts-proto: ^1.174.0
       tsconfig-paths: ^4.0.0
       typescript: ^4.7.4
       uuid: ^8.3.2
       uuidv4: ^6.2.13
     dependencies:
+      '@grpc/grpc-js': 1.4.5
+      '@grpc/proto-loader': 0.6.4
       '@march/core': link:../../packages/march-core
       '@nestjs-modules/ioredis': 1.0.1_lqzeeazzx4qogijrmxmrsuskky
       '@nestjs/axios': 0.1.1_4k3epc74gc2u2qkv5yznawsx6m
@@ -502,9 +524,10 @@ importers:
       '@nestjs/core': 9.4.0_o3jbrsoffotqhrs5cts35m3vnu
       '@nestjs/graphql': 7.4.6_tf3v67lysivctswsyr6x5k2t5u
       '@nestjs/jwt': 9.0.0_@nestjs+common@9.4.0
-      '@nestjs/microservices': 9.2.1_d5jkbjibiuhtczlsi725gqlmqu
+      '@nestjs/microservices': 9.2.1_4z6jzwtaz5boggihiwj5t7bf7a
       '@nestjs/passport': 9.0.3_xygznos57mh4mi6h22se6rwjhq
       '@nestjs/platform-express': 9.0.3_gqkob5jndcfeb3wjw72wbdwyne
+      '@nestjs/swagger': 5.1.5_oapxqihqbztbu6zsycplsfizdq
       '@prisma/client': 3.12.0_prisma@3.12.0
       '@types/bcrypt': 5.0.0
       '@types/jsonwebtoken': 9.0.2
@@ -517,7 +540,9 @@ importers:
       bcrypt: 5.1.0
       crypto-random-string: 3.3.1
       express: 4.18.2
+      google-protobuf: 3.21.2
       graphql: 15.5.1
+      grpc: 1.24.11
       ioredis: 5.3.2
       jsonwebtoken: 8.5.1
       lodash: 4.17.21
@@ -526,13 +551,16 @@ importers:
       passport: 0.6.0
       passport-jwt: 4.0.1
       passport-local: 1.0.0
+      protobufjs: 6.11.2
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       rxjs: 7.8.1
       ts-morph: 14.0.0
+      ts-proto: 1.174.0
       uuid: 8.3.2
       uuidv4: 6.2.13
     devDependencies:
+      '@grpc/nestjs-proto-gen-ts': link:../../packages/nestjs-proto-gen-ts
       '@nestjs/cli': 9.4.2
       '@nestjs/schematics': 9.1.0_typescript@4.9.5
       '@nestjs/testing': 9.4.0_qqdrnxvtpcen7cpm53girvtbrq
@@ -3268,7 +3296,7 @@ packages:
         optional: true
     dependencies:
       '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
-      '@nestjs/microservices': 9.2.1_d5jkbjibiuhtczlsi725gqlmqu
+      '@nestjs/microservices': 9.2.1_4z6jzwtaz5boggihiwj5t7bf7a
       '@nestjs/platform-express': 9.0.3_gqkob5jndcfeb3wjw72wbdwyne
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
@@ -3411,7 +3439,7 @@ packages:
     peerDependencies:
       '@nestjs/common': ^8.0.0 || ^9.0.0
     dependencies:
-      '@nestjs/common': 9.4.0_ce6tq4qiv55dth4enhi4sngxt4
+      '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
       '@types/jsonwebtoken': 8.5.8
       jsonwebtoken: 8.5.1
     dev: false
@@ -3438,6 +3466,18 @@ packages:
     dependencies:
       '@nestjs/common': 9.0.3_pescyquymk6e32unuiplthftue
       class-validator: 0.13.1
+      reflect-metadata: 0.1.13
+    dev: false
+
+  /@nestjs/mapped-types/1.0.0_6r5ladex5hev3tpeuknr3oj3pe:
+    resolution: {integrity: sha512-26AW5jHadLXtvHs+M+Agd9KZ92dDlBrmD0rORlBlvn2KvsWs4JRaKl2mUsrW7YsdZeAu3Hc4ukqyYyDdyCmMWQ==}
+    peerDependencies:
+      '@nestjs/common': ^7.0.8 || ^8.0.0
+      class-transformer: ^0.2.0 || ^0.3.0 || ^0.4.0
+      class-validator: ^0.11.1 || ^0.12.0 || ^0.13.0
+      reflect-metadata: ^0.1.12
+    dependencies:
+      '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
       reflect-metadata: 0.1.13
     dev: false
 
@@ -3552,7 +3592,7 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@nestjs/microservices/9.2.1_d5jkbjibiuhtczlsi725gqlmqu:
+  /@nestjs/microservices/9.2.1_4z6jzwtaz5boggihiwj5t7bf7a:
     resolution: {integrity: sha512-ve4dqgoIaUG9VtinHHGCvf6SvtPjd3I44Mj8z8mSkcB8BEPfJnf4FNOShFBgsedtxLaiZyjpv8NCLcNVv5KKGg==}
     peerDependencies:
       '@grpc/grpc-js': '*'
@@ -3588,6 +3628,7 @@ packages:
       nats:
         optional: true
     dependencies:
+      '@grpc/grpc-js': 1.4.5
       '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
       '@nestjs/core': 9.4.0_o3jbrsoffotqhrs5cts35m3vnu
       ioredis: 5.3.2
@@ -3769,6 +3810,31 @@ packages:
       - class-validator
     dev: false
 
+  /@nestjs/swagger/5.1.5_oapxqihqbztbu6zsycplsfizdq:
+    resolution: {integrity: sha512-jvsgciVEFcYVVEuLdNAmgJDpFSQzIoukg+Ovz1vJ97OeCprx0sVhmocn13nCl/dEwIkwoM3eby9OiaccX0A+3A==}
+    peerDependencies:
+      '@nestjs/common': ^8.0.0
+      '@nestjs/core': ^8.0.0
+      fastify-swagger: '*'
+      reflect-metadata: ^0.1.12
+      swagger-ui-express: '*'
+    peerDependenciesMeta:
+      fastify-swagger:
+        optional: true
+      swagger-ui-express:
+        optional: true
+    dependencies:
+      '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
+      '@nestjs/core': 9.4.0_o3jbrsoffotqhrs5cts35m3vnu
+      '@nestjs/mapped-types': 1.0.0_6r5ladex5hev3tpeuknr3oj3pe
+      lodash: 4.17.21
+      path-to-regexp: 3.2.0
+      reflect-metadata: 0.1.13
+    transitivePeerDependencies:
+      - class-transformer
+      - class-validator
+    dev: false
+
   /@nestjs/swagger/5.1.5_pxalvtaay3p3rd3f3z3rygnxm4:
     resolution: {integrity: sha512-jvsgciVEFcYVVEuLdNAmgJDpFSQzIoukg+Ovz1vJ97OeCprx0sVhmocn13nCl/dEwIkwoM3eby9OiaccX0A+3A==}
     peerDependencies:
@@ -3828,7 +3894,7 @@ packages:
     dependencies:
       '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
       '@nestjs/core': 9.4.0_o3jbrsoffotqhrs5cts35m3vnu
-      '@nestjs/microservices': 9.2.1_d5jkbjibiuhtczlsi725gqlmqu
+      '@nestjs/microservices': 9.2.1_4z6jzwtaz5boggihiwj5t7bf7a
       '@nestjs/platform-express': 9.0.3_gqkob5jndcfeb3wjw72wbdwyne
       tslib: 2.5.0
     dev: true
@@ -6174,6 +6240,11 @@ packages:
     resolution: {integrity: sha512-KCqHwRnaa1InZBtqXzP98LPg0ajCVujMKjqKDhZEthIpAsJl/YEIa3YvXjGXPVqzZVguccuu7ga9KOE1J9rKPQ==}
     dev: true
 
+  /case-anything/2.1.13:
+    resolution: {integrity: sha512-zlOQ80VrQ2Ue+ymH5OuM/DlDq64mEm+B9UTdHULv5osUMD6HalNTblf2b1u/m6QecjsnOkBpqVZ+XPwIVsy7Ng==}
+    engines: {node: '>=12.13'}
+    dev: false
+
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
@@ -6691,6 +6762,12 @@ packages:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
 
+  /detect-libc/1.0.3:
+    resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+    dev: false
+
   /detect-libc/2.0.1:
     resolution: {integrity: sha512-463v3ZeIrcWtdgIg6vI6XUncguvr2TnGl4SzDXinkt9mSLpBJKXT3mW6xT3VQdDN11+WVs29pgvivTc4Lp8v+w==}
     engines: {node: '>=8'}
@@ -6775,6 +6852,12 @@ packages:
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
+    dev: false
+
+  /dprint-node/1.0.8:
+    resolution: {integrity: sha512-iVKnUtYfGrYcW1ZAlfR/F59cUVL8QIhWoBJoSjkkdua/dkWIgjZfiLMeTjiB06X0ZLkQ0M2C1VbUj/CxkIf1zg==}
+    dependencies:
+      detect-libc: 1.0.3
     dev: false
 
   /ecdsa-sig-formatter/1.0.11:
@@ -9931,7 +10014,6 @@ packages:
 
   /long/5.2.3:
     resolution: {integrity: sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q==}
-    dev: true
 
   /lower-case/2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
@@ -10922,7 +11004,6 @@ packages:
       '@protobufjs/utf8': 1.1.0
       '@types/node': 18.16.2
       long: 5.2.3
-    dev: true
 
   /proxy-addr/2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
@@ -12089,6 +12170,29 @@ packages:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
+
+  /ts-poet/6.9.0:
+    resolution: {integrity: sha512-roe6W6MeZmCjRmppyfOURklO5tQFQ6Sg7swURKkwYJvV7dbGCrK28um5+51iW3twdPRKtwarqFAVMU6G1mvnuQ==}
+    dependencies:
+      dprint-node: 1.0.8
+    dev: false
+
+  /ts-proto-descriptors/1.15.0:
+    resolution: {integrity: sha512-TYyJ7+H+7Jsqawdv+mfsEpZPTIj9siDHS6EMCzG/z3b/PZiphsX+mWtqFfFVe5/N0Th6V3elK9lQqjnrgTOfrg==}
+    dependencies:
+      long: 5.2.3
+      protobufjs: 7.2.4
+    dev: false
+
+  /ts-proto/1.174.0:
+    resolution: {integrity: sha512-hptQp5Nu5Vj3Mrj70fx5ccw3rTwPPpKXpa5RJ/WlmWiliVMqNPGYzUuBvd9N/EKsxiSQHiw62aGlZezzF19fKA==}
+    hasBin: true
+    dependencies:
+      case-anything: 2.1.13
+      protobufjs: 7.2.4
+      ts-poet: 6.9.0
+      ts-proto-descriptors: 1.15.0
+    dev: false
 
   /tsconfig-paths-webpack-plugin/4.0.1:
     resolution: {integrity: sha512-m5//KzLoKmqu2MVix+dgLKq70MnFi8YL8sdzQZ6DblmCdfuq/y3OqvJd5vMndg2KEVCOeNz8Es4WVZhYInteLw==}
