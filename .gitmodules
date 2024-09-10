@@ -18,6 +18,10 @@
 	path = services/march-finance
 	url = git@github.com:MarchProject/march-finance.git
 	branch = main
+[submodule "services/march-customer"]
+	path = services/march-customer
+	url = git@github.com:MarchProject/march-customer.git
+	branch = main	
 [submodule "mariaDb"]
 	path = mariaDb
 	url = git@github.com:MarchProject/mariaDb.git
